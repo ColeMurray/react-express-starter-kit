@@ -19,7 +19,7 @@ Gulp is used for building both the client and server. By default, it watches for
 and will rebundle/restart as necessary.
 
 ## React
-Client comes with React by default. Currently running v15.0.2
+Client comes with React by default. Currently running v15.1.0
 
 ## ES6
 ES6 syntax supported by default for client and server
