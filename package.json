@@ -1,0 +1,53 @@
+{
+  "name": "React Starter Kit",
+  "version": "1.0.0",
+  "description": "An ES6 ready React + Express starter kit",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node ./app/index.js",
+    "build": "gulp"
+  },
+  "author": "Cole Murray <@colemurray.cs@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ColeMurray/react-express-starter-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ColeMurray/react-express-starter-kit/issues"
+  },
+  "keywords": [
+    "react",
+    "es6",
+    "node",
+    "express",
+    "gulp"
+  ],
+  "dependencies": {
+    "express": "^4.13.4",
+    "morgan": "^1.7.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.9.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
+    "gulp": "^3.9.1",
+    "gulp-live-server": "0.0.29",
+    "gulp-shell": "^0.5.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-watch": "^4.3.6",
+    "morgan": "^1.7.0",
+    "rimraf": "^2.5.2",
+    "run-sequence": "^1.2.1",
+    "shell": "^0.3.2",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
+  }
+}
