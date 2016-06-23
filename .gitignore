@@ -2,3 +2,4 @@
 node_modules
 app/
 public/js
+npm-debug.log

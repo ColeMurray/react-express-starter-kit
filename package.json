@@ -1,5 +1,5 @@
 {
-  "name": "React Starter Kit",
+  "name": "react-starter-kit",
   "version": "1.0.0",
   "description": "An ES6 ready React + Express starter kit",
   "main": "src/server.js",
