@@ -1,6 +1,9 @@
 import gulp from "gulp";
+import gutil from "gulp-util";
 import shell from "gulp-shell";
 import rimraf from "rimraf";
+import gulpif from "gulp-if";
+import uglify from "gulp-uglify";
 import run from "run-sequence";
 import watch from "gulp-watch";
 import server from "gulp-live-server";
@@ -17,6 +20,8 @@ const paths = {
     clientDist: './public/js/*',
     destination: './app/server'
 };
+
+const production = process.env.NODE_ENV === 'production';
 
 gulp.task('default', cb => {
     run('server', 'build', 'watch', cb);
@@ -52,13 +57,9 @@ gulp.task('restart', () => {
     express.start.bind(express)();
 });
 
-gulp.task('watch', () => {
+gulp.task('watch', ['browserify-watch'], () => {
     gulp.watch(paths.server, () => {
         gulp.start('build-server');
-    });
-
-    gulp.watch(paths.client, () => {
-        gulp.start('build-client');
     });
 });
 
