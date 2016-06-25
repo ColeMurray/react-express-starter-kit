@@ -5,7 +5,6 @@ import rimraf from "rimraf";
 import gulpif from "gulp-if";
 import uglify from "gulp-uglify";
 import run from "run-sequence";
-import watch from "gulp-watch";
 import server from "gulp-live-server";
 import watchify from "watchify";
 import browserify from "browserify";
@@ -24,17 +23,22 @@ const paths = {
 const production = process.env.NODE_ENV === 'production';
 
 gulp.task('default', cb => {
-    run('server', 'build', 'watch', cb);
+    run('server', 'build', 'restart', 'watch-all', cb);
 });
 
 gulp.task('build', cb => {
     run('build-server', 'build-client', cb);
 });
+
+gulp.task('watch', cb => {
+    run('server', 'build', 'restart', 'watch-all', cb);
+});
+
 /**
  * Server
  */
 gulp.task('build-server', cb => {
-    run('clean-server', 'babel', 'restart', cb);
+    run('clean-server', 'babel', cb);
 });
 
 gulp.task('clean-server', cb => {
@@ -57,7 +61,7 @@ gulp.task('restart', () => {
     express.start.bind(express)();
 });
 
-gulp.task('watch', ['browserify-watch'], () => {
+gulp.task('watch-all', ['browserify-watch'], () => {
     gulp.watch(paths.server, () => {
         gulp.start('build-server');
     });

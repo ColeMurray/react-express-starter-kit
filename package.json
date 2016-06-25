@@ -5,7 +5,9 @@
   "main": "src/server.js",
   "scripts": {
     "start": "node ./app/index.js",
-    "build": "gulp"
+    "build": "gulp build",
+    "build-prod": "NODE_ENV=production gulp build",
+    "watch": "gulp"
   },
   "author": "Cole Murray <@colemurray.cs@gmail.com>",
   "license": "MIT",
