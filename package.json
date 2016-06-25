@@ -7,7 +7,7 @@
     "start": "node ./app/index.js",
     "build": "gulp build",
     "build-prod": "NODE_ENV=production gulp build",
-    "watch": "gulp"
+    "watch": "gulp watch"
   },
   "author": "Cole Murray <@colemurray.cs@gmail.com>",
   "license": "MIT",

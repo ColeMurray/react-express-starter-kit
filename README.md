@@ -7,7 +7,7 @@ git clone https://github.com/ColeMurray/react-express-starter-kit.git
 
 1. cd react-express-starter-kit
 2. npm install
-3. npm run build
+3. npm run watch
 4. navigate to http://localhost:3000
 
 
