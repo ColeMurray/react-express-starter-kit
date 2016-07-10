@@ -24,5 +24,9 @@ Client comes with React by default. Currently running v15.1.0
 ## ES6
 ES6 syntax supported by default for client and server
 
+## Deploy
+Want to deploy your project? (Tutorial should not be taken as end all be all to a production environment)
+https://medium.com/@ColeMurray/node-to-google-cloud-compute-engine-in-25-minutes-7188830d884e#.av2lwza1z
+
 
 
